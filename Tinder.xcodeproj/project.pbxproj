@@ -13,6 +13,14 @@
 		BF884FCD263AD0F8006E9754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF884FCB263AD0F8006E9754 /* Main.storyboard */; };
 		BF884FCF263AD100006E9754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF884FCE263AD100006E9754 /* Assets.xcassets */; };
 		BF884FD2263AD100006E9754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF884FD0263AD100006E9754 /* LaunchScreen.storyboard */; };
+		FC06FE75263AE23900C173AE /* CombineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06FE74263AE23900C173AE /* CombineCardView.swift */; };
+		FC06FE7A263AE7AE00C173AE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06FE79263AE7AE00C173AE /* UILabel.swift */; };
+		FC06FE7E263AEE0000C173AE /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06FE7D263AEE0000C173AE /* Usuario.swift */; };
+		FC06FE84263AF32200C173AE /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06FE83263AF32200C173AE /* UIImageView.swift */; };
+		FC6C3D9B263ADBAD0068AEB8 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C3D9A263ADBAD0068AEB8 /* CombineVC.swift */; };
+		FCFF3E042640157900313225 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF3E032640157900313225 /* UsuarioService.swift */; };
+		FCFF3E062640159600313225 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF3E052640159600313225 /* UIView.swift */; };
+		FCFF3E082640178500313225 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF3E072640178500313225 /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		BF884FCE263AD100006E9754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF884FD1263AD100006E9754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF884FD3263AD100006E9754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC06FE74263AE23900C173AE /* CombineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCardView.swift; sourceTree = "<group>"; };
+		FC06FE79263AE7AE00C173AE /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		FC06FE7D263AEE0000C173AE /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		FC06FE83263AF32200C173AE /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		FC6C3D9A263ADBAD0068AEB8 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
+		FCFF3E032640157900313225 /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
+		FCFF3E052640159600313225 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FCFF3E072640178500313225 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,11 @@
 		BF884FC4263AD0F8006E9754 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				FC06FE81263AEF1C00C173AE /* Service */,
+				FC06FE7F263AEE0800C173AE /* Model */,
+				FC06FE76263AE58100C173AE /* Lib */,
+				FC06FE73263AE22500C173AE /* View */,
+				FC06FE72263AE21C00C173AE /* Controller */,
 				BF884FC5263AD0F8006E9754 /* AppDelegate.swift */,
 				BF884FC7263AD0F8006E9754 /* SceneDelegate.swift */,
 				BF884FC9263AD0F8006E9754 /* ViewController.swift */,
@@ -65,6 +86,49 @@
 				BF884FD3263AD100006E9754 /* Info.plist */,
 			);
 			path = Tinder;
+			sourceTree = "<group>";
+		};
+		FC06FE72263AE21C00C173AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC6C3D9A263ADBAD0068AEB8 /* CombineVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC06FE73263AE22500C173AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC06FE74263AE23900C173AE /* CombineCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC06FE76263AE58100C173AE /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF3E052640159600313225 /* UIView.swift */,
+				FC06FE79263AE7AE00C173AE /* UILabel.swift */,
+				FC06FE83263AF32200C173AE /* UIImageView.swift */,
+				FCFF3E072640178500313225 /* UIButton.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		FC06FE7F263AEE0800C173AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC06FE7D263AEE0000C173AE /* Usuario.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC06FE81263AEF1C00C173AE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FCFF3E032640157900313225 /* UsuarioService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFF3E062640159600313225 /* UIView.swift in Sources */,
+				FC6C3D9B263ADBAD0068AEB8 /* CombineVC.swift in Sources */,
 				BF884FCA263AD0F8006E9754 /* ViewController.swift in Sources */,
+				FCFF3E042640157900313225 /* UsuarioService.swift in Sources */,
+				FC06FE7A263AE7AE00C173AE /* UILabel.swift in Sources */,
+				FC06FE75263AE23900C173AE /* CombineCardView.swift in Sources */,
+				FC06FE7E263AEE0000C173AE /* Usuario.swift in Sources */,
+				FC06FE84263AF32200C173AE /* UIImageView.swift in Sources */,
+				FCFF3E082640178500313225 /* UIButton.swift in Sources */,
 				BF884FC6263AD0F8006E9754 /* AppDelegate.swift in Sources */,
 				BF884FC8263AD0F8006E9754 /* SceneDelegate.swift in Sources */,
 			);
