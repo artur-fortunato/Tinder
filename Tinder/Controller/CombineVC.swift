@@ -35,12 +35,18 @@ class CombineVC: UIViewController {
         
         self.adicionarHeader()
         self.adicionarFooter()
-        //self.getUser()
+        self.getUser()
     }
     
     func getUser() {
-        self.usuarios = UsuarioService.shared.buscaUsuarios()
-        self.addCard()
+        UsuarioService.shared.buscaUsuarios { (usuarios, err) in
+            if let usuarios = usuarios {
+                DispatchQueue.main.async {
+                    self.usuarios = usuarios
+                    self.addCard()
+                }
+            }
+        }
     }
 }
 
@@ -88,9 +94,16 @@ extension CombineVC {
         for usuario in usuarios {
             let card = CombineCardView()
             card.frame = CGRect(x: 0, y: 0, width: view.bounds.width - 32, height: view.bounds.height * 0.7)
+            
+            card.callback = { (data) in
+                self.visualizarDetalhe(usuario: data)
+            }
+            
             card.center = view.center
             card.usuario = usuario
             card.tag = usuario.id
+            
+            
             
             let gesture = UIPanGestureRecognizer()
             gesture.addTarget(self, action: #selector(handlerCard))
@@ -111,8 +124,18 @@ extension CombineVC {
     
     func verificarMatch(usuario: Usuario) {
         if usuario.match {
-            print("uou")
+            let matchVC = MatchVC()
+            matchVC.usuario = usuario
+            matchVC.modalPresentationStyle = .fullScreen
+            self.present(matchVC, animated: true, completion: nil)
         }
+    }
+    
+    func visualizarDetalhe(usuario: Usuario) {
+        let detalheVC = DetalheVC()
+        detalheVC.modalPresentationStyle = .fullScreen
+        
+        self.present(detalheVC, animated: true, completion: nil)
     }
 }
 
